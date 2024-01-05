@@ -17,7 +17,7 @@ import { FaCartShopping } from "react-icons/fa6"
 const BookCard = ({ books, headLine }) => {
 
     const allBooks = Array.isArray(books?.data) ? books.data : [];
-
+    
     return (
         <div className="my-16 px-4 lg:px-24">
             <h2 className="text-5xl text-center font-bold text-black my-5">
@@ -25,7 +25,7 @@ const BookCard = ({ books, headLine }) => {
             </h2>
 
             {/* Cards */}
-            <div className='w-full'>
+            <div className='mt-12'>
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={10}
@@ -60,7 +60,7 @@ const BookCard = ({ books, headLine }) => {
                             <SwiperSlide key={book._id}>
                                 <Link to={`/book/${book._id}`}>
                                     <div className='relative'>
-                                        <img src={book.imageURL} alt="" className="!w-full !h-full" />
+                                        <img src={book.imageURL} alt="" className="!w-full !h-96" />
                                         <div className='absolute top-3 right-3 bg-blue-600 hover:bg-black p-2 rounded'>
                                             <FaCartShopping className=' w-4 h-4 text-white' />
                                         </div>

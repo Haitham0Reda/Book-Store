@@ -12,10 +12,10 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
     const [sticky, setSticky] = useState(false)
 
-    
+
     // Toggle Menu
 
-    const togglemenu = () => {
+    const toggleMenu = () => {
         setMenuOpen(!menuOpen)
     }
 
@@ -29,13 +29,13 @@ const Navbar = () => {
             }
             window.addEventListener('scroll', handelScroll)
 
-            return () => {
-                window.addEventListener('scroll', handelScroll)
-            }
+        }
+        return () => {
+            window.addEventListener('scroll', handelScroll)
         }
     }, [])
 
-    
+
     // NavItems Here
     const navItems = [
         { link: "Home", path: '/' },
@@ -73,7 +73,7 @@ const Navbar = () => {
                     {/* Button for mobile  */}
 
                     <div className="md:hidden">
-                        <button onClick={togglemenu} className="text-black focus:outline-none">
+                        <button onClick={toggleMenu} className="text-black focus:outline-none">
                             {
                                 menuOpen ? <FaXmark className="h-5 w-5 text-black" /> : <FaBarsStaggered className="h-5 w-5 text-black" />
                             }

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react"
 import BookCard from "../BookCard/BookCard";
 
-export const FavoriteBooks = () => {
+export const BestSellerBooks = () => {
   // State
   const [books, setBooks] = useState([]);
 

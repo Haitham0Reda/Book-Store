@@ -31,11 +31,7 @@ const Router = createBrowserRouter([
             {
                 path: "/book/:id",
                 element: <SingleBook />,
-                loader: async ({ params }) => {
-                    const res = await fetch(`http://localhost:3000/book/${params.id}`);
-                    const data = await res.json();
-                    return data; // This data will be available in useLoaderData
-                }
+                loader: ({ params }) => fetch(`http://localhost:4040/book/${params.id}`)
             }
         ]
     }

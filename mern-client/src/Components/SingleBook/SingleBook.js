@@ -1,13 +1,14 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 
+
 const SingleBook = () => {
-    const { _id, bookTitle } = useLoaderData();
+    const { _id, bookTitle, imageURL } = useLoaderData();
 
     return (
-        <div className="mt-28 px-4 lg:px-24">
+        <div key={_id} className="mt-28 px-4 lg:px-24">
+            <img src={imageURL} alt="" className="h-96" />
             <h2>{bookTitle}</h2>
-            <p className="text-gray-600 text-lg mt-12 font-medium">ID : {_id}</p>
         </div>
     );
 };
