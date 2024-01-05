@@ -2,7 +2,7 @@ import React from 'react'
 import { Footer } from 'flowbite-react';
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 
-const Foter = () => {
+const MyFooter = () => {
     return (
         <Footer bgDark>
             <div className="w-full">
@@ -58,4 +58,4 @@ const Foter = () => {
     )
 }
 
-export default Foter
+export default MyFooter
