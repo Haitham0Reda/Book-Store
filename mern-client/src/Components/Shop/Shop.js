@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Card } from 'flowbite-react';
 
+
+
 const Shop = () => {
 
     //State
@@ -26,16 +28,18 @@ const Shop = () => {
                 {
                     allBooks.map((book) => {
                         return (
-                            <Card
-                            key={book._id}
-                            >
-                                <img src={book.imageURL} alt="" className='h-80' />
+                            <Card>
+                                <img src={book.imageURL} alt="" className='h-96' />
                                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                     {book.bookTitle}
                                 </h5>
-                                <p className="font-sm text-gray-700 dark:text-gray-400">
+                                <p className="font-normal text-gray-700 dark:text-gray-400">
                                     {book.bookdescription}
                                 </p>
+
+                                <button className='bg-blue-700 text-white font-semibold py-2 rounded hover:bg-black transition-all duration-300'>
+                                    Buy Now
+                                </button>
                             </Card>
                         )
                     })
